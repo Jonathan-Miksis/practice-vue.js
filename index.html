@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Practice Vue.js</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="index.js" defer></script>
+</head>
+
+<body>
+  <!-- <h1>Hello from HTML!</h1>
+  <div id="app">
+    {{ message }}
+  </div> -->
+
+  <div id="app-2">
+    <span v-bind:title="message">
+      Hover your mouse over me for a few seconds
+    </span>
+  </div>
+
+  <div id="app-4">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+  </div>
+
+  <div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message">
+  </div>
+
+  <div id="button">
+    <p>{{ message }}</p>
+    <button type="submit" v-on:click="reverse">"Reverse This!</button>
+  </div>
+
+  <hr>
+
+  <div id="app">
+    <button v-on:click="toggle">Click Here</button>
+    <p v-if="displayInfo">Toggle me on and off</p>
+  </div>
+
+
+</body>
+
+</html>
