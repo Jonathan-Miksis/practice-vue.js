@@ -9,12 +9,12 @@
 </head>
 
 <body>
-  <!-- <h1>Hello from HTML!</h1>
+  <!-- <!-- <h1>Hello from HTML!</h1>
   <div id="app">
     {{ message }}
   </div> -->
 
-  <div id="app-2">
+  <!-- <div id="app-2">
     <span v-bind:title="message">
       Hover your mouse over me for a few seconds
     </span>
@@ -43,8 +43,16 @@
   <div id="app">
     <button v-on:click="toggle">Click Here</button>
     <p v-if="displayInfo">Toggle me on and off</p>
-  </div>
+  </div> --> -->
 
+  <hr>
+  <div id="app">
+    <div v-for="team in teams">
+      {{ team }}
+    </div>
+    <input type="text" v-model="newTeam">
+    <button v-on:click="addTeam()">Add a new team here</button>
+  </div>
 
 </body>
 

@@ -3,11 +3,24 @@
 var app = new Vue({
   el: "#app",
   data: {
-    displayInfo: true
+    displayInfo: true,
+    teams: [
+      'Steelers',
+      'Patriots',
+      'Jets',
+      'Chiefs',
+      'Jaguars'
+    ],
+    newTeam: ''
   },
   methods: {
     toggle: function() {
       this.displayInfo = !this.displayInfo;
+    },
+    addTeam: function() {
+      console.log('adding team');
+      console.log(this.newTeam);
+      this.teams.push(this.newTeam);
     }
   }
 });
@@ -35,7 +48,7 @@ var app6 = new Vue({
   data: {
     message: 'Hello Vue!'
   }
-})
+});
 
 var button = new Vue({
   el: "#button",
