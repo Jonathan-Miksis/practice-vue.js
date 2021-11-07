@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <title>Todos Vue.js</title>
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   <script src="todos.js" defer></script>
 </head>
 
@@ -12,12 +13,16 @@
   <h1>Hello from HTML!</h1>
   <div id="app">
     {{ message }}
+    <br>
+    <button v-on:click="loadTodos()">Make Web Request!</button>
+    <p>Todos:</p>
     <div v-for="todo in todos">
-      <p>title: {{ todo.title }}</p>
-      <p>userId: {{ todo.userId }}</p>
+      <ul>
+        <li>title: {{ todo.title }}</li>
+      </ul>
+      <!-- <p>userId: {{ todo.userId }}</p>
       <p>id: {{ todo.id }}</p>
-      <p>completed: {{ todo.completed }}</p>
-      <hr>
+      <p>completed: {{ todo.completed }}</p> -->
     </div>
   </div>
 </body>
