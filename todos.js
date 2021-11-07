@@ -18,5 +18,19 @@ var app = new Vue({
           this.todos = response.data;
         });  
     },
+    postTodos: function() {
+      axios.post('https://jsonplaceholder.typicode.com/todos', {
+        userId: 1,
+        title: 'make bed',
+        completed: true
+      })
+        .then(function (response) {
+          console.log(response.data);
+          this.todos = response.data;
+        });
+    }
   },
+  created: function() {
+    this.loadTodos();
+  }
 });
