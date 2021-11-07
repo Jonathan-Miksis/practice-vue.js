@@ -24,9 +24,9 @@ var app = new Vue({
         title: 'make bed',
         completed: true
       })
-        .then(function (response) {
+        .then(response => {
           console.log(response.data);
-          this.todos = response.data;
+          this.todos.push(response.data);
         });
     }
   },
